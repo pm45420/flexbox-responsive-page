@@ -1,0 +1,154 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    font-family: arial;
+    display:flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+header{
+    background: rgb(61, 85, 13);
+    display:flex;
+    padding: 15px;
+    align-items: center;
+
+}
+
+ header ul {
+    list-style: none; 
+    display:flex; 
+    padding: 0;
+    margin: 0;
+    /* padding&margin is set to zero because ul elements have some margin&padding by de fault */
+ }
+ /* margin: 0 auto; whenever any div having flex style is set to margin auto from left and right then all div gets seperated equally covering whole screen*! */
+ 
+ #logo{
+     margin:0 auto;
+     font-size: 30px;
+    
+  }
+  #menu li {
+    padding:10px;
+  }
+  #social-links li{
+    padding: 10px;
+  }
+  header a{
+    color: #fff;
+  }
+  #main{
+    display:flex;
+  }
+  aside{
+    padding: 15px;
+    flex:0 0 20vw;
+    background: beige;
+  }
+  .services-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .service-box{
+    border: 1px solid #eee;
+    padding:10px;
+    flex-basis:32%;
+    max-width:370px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  footer{
+    background: rgb(61, 85, 13);
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+  }
+  .service-box img{
+    width:100%
+  }
+
+  article{
+    padding: 10px;
+  }
+  aside ul{
+    list-style: none;
+    padding: 0;
+  }
+ aside ul a{
+  color:rgb(61, 85, 13) ;
+  padding:10px;
+  display:block;
+  border-bottom: 1px solid grey;
+ }
+ aside img{
+  width:100%;
+ }
+ .call-to-action a{
+  background: grey;
+  color: white;
+  padding: 8px 13px;
+  margin: 2px solid transparent;
+  display: block;
+ }
+ .call-to-action{
+  align-self:flex-start;
+  margin-top: top;
+ }
+ .call-to-action a:hover{
+  background: transparent;
+  border:2px solid grey;
+  color:grey;
+  display: block;
+  
+ }
+ .service-box h3{
+  margin: 5px 0 10px;
+ }
+ .service-box p{
+  margin: 0 0 10px;
+ }
+
+
+ @media screen and (max-width:850px) {
+  aside{
+    
+    flex:0 0 30vw;
+
+  
+ }
+ .service-box{
+  padding:10px;
+  flex-basis:48%;
+  max-width:370px;
+ }
+}
+@media screen and (max-width:600px){
+  header{
+    flex-direction: column;
+  }
+  #logo{
+    order: -1;
+     /* yahoo baba logo ko oopar lane ke liye */
+  }
+  article{
+    order:-1;
+  }
+  #main{
+    flex-direction: column;
+  }
+  .services-container{
+    flex-direction: column;
+    /* we wanted to show all images one by one from top to bottom */
+    align-items: center;
+    /* service boxes were shifted to left,we made them at centre */
+    
+  }
+  h2{
+    text-align: center;
+  }
+}
+  
